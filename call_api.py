@@ -22,3 +22,14 @@ if response.status_code==200:
 
 print("---------------------------")
 # print(response.content.decode(encoding="utf-8"))
+
+
+weather_url = "http://wthrcdn.etouch.cn/weather_mini?citykey=101010100"
+
+response = requests.get(weather_url)
+if response.status_code == 200:
+    result = response.json()
+    print(result)
+    jsonResult = json.dumps(result)
+    print(result["data"]['yesterday']['date'])
+
