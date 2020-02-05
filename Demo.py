@@ -165,3 +165,9 @@ name = input('你的名字：')  # python3
 '''多行注释
 多行注释....'''
 print('hello,', name)
+
+# 切片
+spam = ['a', 'b', 'c', 'd']
+print(spam[1:-1])  # 输出 b,c
+del spam[1] # 删除
+print(spam)

@@ -67,41 +67,41 @@ import turtle
 #
 # turtle.done()
 
+#
+# x = 36
+# y = 120
+# # turtle.speed(50)
+# for i in range(10):
+#     if i % 2 == 0:
+#         turtle.color("skyblue")
+#     else:
+#         turtle.color("pink")
+#
+#     print(f'x={x},y={y}')
+#     turtle.speed(50)
+#     turtle.begin_fill()
+#
+#     turtle.forward(y)
+#     turtle.left(x)
+#
+#     turtle.forward(y)
+#     turtle.left(180 - x)
+#
+#     turtle.forward(y)
+#     turtle.left(x)
+#
+#     turtle.forward(y)
+#     turtle.end_fill()
+#
+#     turtle.left(180)
+#
+#
+# turtle.done()
 
-x = 36
-y = 120
-# turtle.speed(50)
-for i in range(10):
-    if i % 2 == 0:
-        turtle.color("skyblue")
-    else:
-        turtle.color("pink")
-
-    print(f'x={x},y={y}')
-    turtle.speed(50)
-    turtle.begin_fill()
-
-    turtle.forward(y)
-    turtle.left(x)
-
-    turtle.forward(y)
-    turtle.left(180 - x)
-
-    turtle.forward(y)
-    turtle.left(x)
-
-    turtle.forward(y)
-    turtle.end_fill()
-
-    turtle.left(180)
-
-
-turtle.done()
-
-# import turtle as t
-# t.color("blue")
-# t.speed(500)
-# for i in range(360):
-#     t.fd(i)
-#     t.left(70)
-# t.done()
+import turtle as t
+t.color("blue")
+t.speed(500)
+for i in range(360):
+    t.fd(i)
+    t.left(70)
+t.done()
