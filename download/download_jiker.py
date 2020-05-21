@@ -5,7 +5,7 @@ import json
 import os
 from pathlib import Path
 
-url_data_list = 'https://course.jiker.com/api/web/course?page=1&page_size=12&sort_type=time&difficulty_level=0'
+url_data_list = 'https://course.jiker.com/api/web/course?page={0}&page_size=12&sort_type=time'
 # url_data_detail = 'https://course.jiker.com/api/web/course/130?type=lesson'
 url_data_detail = 'https://course.jiker.com/api/web/course/{0}?type=lesson'
 # url_data_video = 'https://learn.jiker.com/course/130/4453/4454'
@@ -55,9 +55,10 @@ def request_detail(id):
 
 # 课程列表
 print('start')
-loadData_response = request_http(url_data_list)
-data_list = loadData_response['data']['list']
-for item in data_list:
-    if not (item['is_vip']):
-        request_detail(item['id'])
+for page in range(12):
+    loadData_response = request_http(url_data_list.format(page))
+    data_list = loadData_response['data']['list']
+    for item in data_list:
+        if not (item['is_vip']):
+            request_detail(item['id'])
 print('end')
