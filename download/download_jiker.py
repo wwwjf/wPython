@@ -21,7 +21,7 @@ headers = {
 
 def request_http(url):
     response = requests.get(url, headers=headers)
-    print('code={0},{1}'.format(response.status_code, response.text))
+    print('code={0},{1}'.format(response.status_code,response.text))
     return json.loads(response.text)
 
 
@@ -31,7 +31,7 @@ def video_save(id_course, id_lesson, lesson_child):
     if os.path.exists(dir) is False:
         directory = Path(dir)
         Path.mkdir(directory, parents=True)
-    videoName = '{0}_{1}_{2}.mp4'.format(id_lesson, lesson_child['id'], lesson_child['name']).replace(' ', '')
+    videoName = '{0}_{1}_{2}.mp4'.format(id_lesson, lesson_child['id'], lesson_child['name']).replace('/',' ')
     file = '{0}/{1}'.format(dir, videoName)
     if os.path.exists(file) is True:
         print('{0}文件已存在'.format(videoName))
